@@ -3,8 +3,9 @@ import getId from '../getter/get-id.js';
 import readlineSync from 'readline-sync';
 
 const setRegion = (name='') => {
+    let newRegion;
   if (name === '') {
-    const newRegion = readlineSync.question('New region')
+    newRegion = readlineSync.question('New region')
     .toLowerCase().trim();
   } else {
     newRegion = name;
